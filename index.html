@@ -21,41 +21,31 @@
         /* Hauptlayout: links Inhalt, rechts Visitenkarte + Galerie */
         .layout {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;   /* Spalten an die Seiten drücken */
             align-items: flex-start;
-            gap: 40px;
-            padding: 20px;
+            width: 100%;
+            max-width: 1500px;                /* Gesamtbreite vergrößert */
+            margin: 0 auto;
+            padding: 20px 60px;               /* Abstand zum Rand */
+            box-sizing: border-box;
         }
 
         /* Linke Spalte */
         .content {
-            max-width: 600px;
+            max-width: 650px;
         }
 
-        .header-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Visitenkarte in rechter Spalte – größer */
+        /* Visitenkarte oben rechts – größer */
         .visitenkarte {
-            width: 260px;
+            width: 300px;
             border-radius: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-        }
-
-        /* Angebotsbild */
-        .gif-container img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 20px;
         }
 
         /* Rechte Spalte */
         .sidebar {
-            width: 260px;
+            width: 300px;
             position: sticky;
             top: 20px;
         }
@@ -71,6 +61,13 @@
             width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        /* Angebotsbild */
+        .gif-container img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
         }
 
         /* Anfahrt */
@@ -91,9 +88,7 @@
     <!-- Linke Spalte -->
     <div class="content">
 
-        <div class="header-box">
-            <h1>NEU IN ENGWILEN!</h1>
-        </div>
+        <h1>NEU IN ENGWILEN!</h1>
 
         <div class="gif-container">
             <img src="bilder/Beauty-by-Daniela Angebot.JPG" alt="Beauty-by-Daniela Angebot">
@@ -102,7 +97,7 @@
         <h2>Anfahrt</h2>
         <p>
             Beauty by Daniela<br>
-            Hauptstrasse 23<br>
+            Hauptstrasse 12<br>
             8564 Engwilen
         </p>
 
@@ -122,7 +117,7 @@
         <!-- Galerie darunter -->
         <div class="gallery">
             <img src="bilder/Bild-1.JPG" alt="Bild 1">
-            <img src="bilder/Bild-2.JPG" alt="Bild 2">
+            <img src="bilder/Bild-2.JPG  alt="Bild 2">
             <img src="bilder/Bild-3.JPG" alt="Bild 3">
            
         </div>

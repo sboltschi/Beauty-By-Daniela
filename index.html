@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Neu in Engwilen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
@@ -12,40 +13,25 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             min-height: 100vh;
         }
 
         h1 {
             color: #b03a6b;
-            margin-bottom: 20px;
+            margin: 0;
             letter-spacing: 2px;
         }
 
-        .gif-container {
-            max-width: 90vw;
-            max-height: 80vh;
+        /* Neuer Bereich für Text + Bild oben */
+        .header-box {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        .gif-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-    </style>
-</head>
-<body>
-    <div class="header-box">
-  <h1>NEU IN ENGWILEN!</h1>
-  <img src="bilder/Visitenkarte-1.jpg" alt="Visitenkarte" class="angebot-bild">
-</div>
-
-
-    <div class="gif-container">
-        <!-- Ersetze 'bilder/beauty-animation.gif' durch den Pfad zu deinem JPG -->
-        <img src="bilder/Beauty-by-Daniela Angebot.JPG" alt="Beauty-by-Daniela Angebot">
-        <img src="bilder/Visitenkarte-1.jpg" alt="bilder/Visitenkarte-1.jpg">
-    </div>
-</body>
-</html>
+        .angebot

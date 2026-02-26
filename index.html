@@ -18,7 +18,7 @@
             letter-spacing: 2px;
         }
 
-        /* Hauptlayout: links Inhalt, rechts Galerie */
+        /* Hauptlayout: links Inhalt, rechts Visitenkarte + Galerie */
         .layout {
             display: flex;
             justify-content: center;
@@ -38,25 +38,33 @@
             align-items: center;
         }
 
-        .angebot-bild {
-            width: 160px;
-            border-radius: 10px;
+        /* Visitenkarte in rechter Spalte – größer */
+        .visitenkarte {
+            width: 260px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         }
 
+        /* Angebotsbild */
         .gif-container img {
             width: 100%;
             border-radius: 10px;
             margin-top: 20px;
         }
 
-        /* Rechte Spalte: Galerie */
+        /* Rechte Spalte */
+        .sidebar {
+            width: 260px;
+            position: sticky;
+            top: 20px;
+        }
+
+        /* Galerie */
         .gallery {
-            width: 220px;
             display: flex;
             flex-direction: column;
             gap: 15px;
-            position: sticky;
-            top: 20px;
         }
 
         .gallery img {
@@ -85,7 +93,6 @@
 
         <div class="header-box">
             <h1>NEU IN ENGWILEN!</h1>
-            <img src="bilder/Visitenkarte-1.jpg" class="angebot-bild" alt="Visitenkarte">
         </div>
 
         <div class="gif-container">
@@ -106,12 +113,20 @@
 
     </div>
 
-    <!-- Rechte Spalte: Galerie -->
-    <div class="gallery">
-        <img src="bilder/Bild-1.JPG" alt="Bild 1">
-        <img src="bilder/Bild-2.JPG" alt="Bild 2">
-        <img src="bilder/Bild-3.JPG" alt="Bild 3">
-        
+    <!-- Rechte Spalte: Visitenkarte + Galerie -->
+    <div class="sidebar">
+
+        <!-- Visitenkarte oben -->
+        <img src="bilder/Visitenkarte-1.jpg" alt="Visitenkarte" class="visitenkarte">
+
+        <!-- Galerie darunter -->
+        <div class="gallery">
+            <img src="bilder/Bild-1.JPG" alt="Bild 1">
+            <img src="bilder/Bild-2.JPG" alt="Bild 2">
+            <img src="bilder/Bild-3.JPG" alt="Bild 3">
+           
+        </div>
+
     </div>
 
 </div>

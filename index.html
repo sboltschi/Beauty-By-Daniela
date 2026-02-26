@@ -10,100 +10,103 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background: #222222;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
+            color: white;
         }
 
         h1, h2 {
             color: #b03a6b;
             letter-spacing: 2px;
-            text-align: center;
+        }
+
+        /* Hauptlayout: links Inhalt, rechts Galerie */
+        .layout {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        /* Linke Spalte */
+        .content {
+            max-width: 600px;
         }
 
         .header-box {
-            width: 100%;
-            max-width: 900px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
         }
 
         .angebot-bild {
-            width: 180px;
-            height: auto;
+            width: 160px;
             border-radius: 10px;
-        }
-
-        .gif-container {
-            max-width: 90vw;
-            max-height: 80vh;
         }
 
         .gif-container img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             margin-top: 20px;
         }
 
-        /* Galerie */
+        /* Rechte Spalte: Galerie */
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            width: 220px;
+            display: flex;
+            flex-direction: column;
             gap: 15px;
-            width: 90%;
-            max-width: 900px;
-            margin: 40px auto;
+            position: sticky;
+            top: 20px;
         }
 
         .gallery img {
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
 
         /* Anfahrt */
-        .anfahrt {
-            width: 90%;
-            max-width: 900px;
-            margin: 40px auto 60px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            color: white;
-            font-size: 18px;
-        }
-
         .anfahrt iframe {
             width: 100%;
             height: 300px;
             border: none;
             border-radius: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Kopfbereich -->
-    <div class="header-box">
-        <h1>NEU IN ENGWILEN!</h1>
-        <img src="bilder/Visitenkarte-1.jpg" alt="Visitenkarte" class="angebot-bild">
+<div class="layout">
+
+    <!-- Linke Spalte -->
+    <div class="content">
+
+        <div class="header-box">
+            <h1>NEU IN ENGWILEN!</h1>
+            <img src="bilder/Visitenkarte-1.jpg" class="angebot-bild" alt="Visitenkarte">
+        </div>
+
+        <div class="gif-container">
+            <img src="bilder/Beauty-by-Daniela Angebot.JPG" alt="Beauty-by-Daniela Angebot">
+        </div>
+
+        <h2>Anfahrt</h2>
+        <p>
+            Beauty by Daniela<br>
+            Hauptstrasse 12<br>
+            8564 Engwilen
+        </p>
+
+        <iframe 
+            src="https://www.google.com/maps?q=Engwilen&output=embed"
+            loading="lazy">
+        </iframe>
+
     </div>
 
-    <!-- Angebot -->
-    <div class="gif-container">
-        <img src="bilder/Beauty-by-Daniela Angebot.JPG" alt="Beauty-by-Daniela Angebot">
-    </div>
-
-    <!-- Galerie -->
-    <h2>Galerie</h2>
+    <!-- Rechte Spalte: Galerie -->
     <div class="gallery">
         <img src="bilder/foto1.jpg" alt="Bild 1">
         <img src="bilder/foto2.jpg" alt="Bild 2">
@@ -113,21 +116,7 @@
         <img src="bilder/foto6.jpg" alt="Bild 6">
     </div>
 
-    <!-- Anfahrt -->
-    <h2>Anfahrt</h2>
-    <div class="anfahrt">
-        <p>
-            Beauty by Daniela<br>
-            Hauptstrasse 12<br>
-            8564 Engwilen
-        </p>
-
-        <iframe 
-            src="https://www.google.com/maps?q=Engwilen&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
+</div>
 
 </body>
 </html>

@@ -24,7 +24,7 @@
             justify-content: space-between;   /* Spalten an die Seiten drücken */
             align-items: flex-start;
             width: 100%;
-            max-width: 1500px;                /* Gesamtbreite vergrößert */
+            max-width: 1800px;                /* Seite deutlich breiter */
             margin: 0 auto;
             padding: 20px 60px;               /* Abstand zum Rand */
             box-sizing: border-box;
@@ -33,6 +33,15 @@
         /* Linke Spalte */
         .content {
             max-width: 650px;
+            margin-right: auto;               /* aktiv nach links drücken */
+        }
+
+        /* Rechte Spalte */
+        .sidebar {
+            width: 300px;
+            margin-left: auto;                /* aktiv nach rechts drücken */
+            position: sticky;
+            top: 20px;
         }
 
         /* Visitenkarte oben rechts – größer */
@@ -41,13 +50,6 @@
             border-radius: 12px;
             margin-bottom: 25px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-        }
-
-        /* Rechte Spalte */
-        .sidebar {
-            width: 300px;
-            position: sticky;
-            top: 20px;
         }
 
         /* Galerie */
@@ -87,6 +89,11 @@
 
     <!-- Linke Spalte -->
     <div class="content">
+        
+.content h1 {
+    text-align: center;
+    width: 100%;
+}
 
         <h1>NEU IN ENGWILEN!</h1>
 

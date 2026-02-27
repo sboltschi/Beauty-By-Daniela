@@ -20,14 +20,15 @@
 
         /* Hauptlayout: links Inhalt, rechts Visitenkarte + Galerie */
         .layout {
-    display: flex;
-    justify-content: space-between;   /* Linke Spalte ganz nach links, rechte ganz nach rechts */
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1650px;                /* Seite deutlich breiter */
-    margin: 0 auto;
-    padding: 20px 40px;                  /* Abstand zum Browserrand */
-    box-sizing: border-box;
+    .layout {
+            display: flex;
+            justify-content: space-between;   /* Spalten an die Seiten drücken */
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1500px;                /* Gesamtbreite vergrößert */
+            margin: 0 auto;
+            padding: 20px 60px;               /* Abstand zum Rand */
+            box-sizing: border-box;
 }
 
         /* Linke Spalte */
@@ -97,7 +98,7 @@
         <h2>Anfahrt</h2>
         <p>
             Beauty by Daniela<br>
-            Hauptstrasse 12<br>
+            Hauptstrasse 23<br>
             8564 Engwilen
         </p>
 
@@ -117,7 +118,7 @@
         <!-- Galerie darunter -->
         <div class="gallery">
             <img src="bilder/Bild-1.JPG" alt="Bild 1">
-            <img src="bilder/Bild-2.JPG  alt="Bild 2">
+            <img src="bilder/Bild-2.JPG"  alt="Bild 2">
             <img src="bilder/Bild-3.JPG" alt="Bild 3">
            
         </div>
